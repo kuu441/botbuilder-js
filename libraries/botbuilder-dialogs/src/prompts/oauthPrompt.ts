@@ -414,9 +414,11 @@ export class OAuthPrompt extends Dialog {
                 );
 
                 context.turnState.set(context.adapter.ConnectorClientKey, connectorClient);
+                console.log('※※※※recgnizedToken1※※※※')
             }
         } else if (OAuthPrompt.isTeamsVerificationInvoke(context)) {
             const magicCode = context.activity.value.state;
+            console.log('※※※※recgnizedToken1※※※※')
 
             try {
                 token = await UserTokenAccess.getUserToken(context, this.settings, magicCode);
